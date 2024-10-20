@@ -1,0 +1,10 @@
+.foot {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+  }
+}

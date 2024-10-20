@@ -1,0 +1,23 @@
+@media (min-width: 320px) and (max-width: 640px) {
+}
+
+@mixin mobile-large {
+  // 640px - 899px
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  // 900px - 1239px
+  @media (min-width: 900px)  {
+    @content;
+  }
+}
+
+@mixin desktop {
+  // 1240px va undan katta
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

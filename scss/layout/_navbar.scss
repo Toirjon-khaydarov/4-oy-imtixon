@@ -1,0 +1,97 @@
+.nav {
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    padding: 8px 0;
+  }
+  &__logo {
+    width: 100%;
+    img {
+      width: 50%;
+    }
+  }
+  &__list {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    font-style: normal;
+    gap: 40px;
+  }
+  &__search-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  &__burger-btn {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: $components-color;
+    border-radius: 6px;
+
+    span {
+      display: block;
+      margin: auto;
+      width: 24px;
+      height: 3px;
+      background-color: $global-colors;
+    }
+  }
+  &__search {
+    display: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: $components-color;
+    border-radius: 6px;
+    span {
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@include mobile-large {
+  .nav {
+    &__search {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      background-color: $components-color;
+      border-radius: 6px;
+      span {
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .nav {
+    &__search-menu {
+      gap: 48px;
+    }
+  }
+}
+
+@include desktop {
+  .nav {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-style: normal;
+      gap: 40px;
+      color: black;
+    }
+  }
+}

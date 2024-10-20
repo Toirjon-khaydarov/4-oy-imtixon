@@ -1,0 +1,24 @@
+.btn {
+  display: none;
+  padding: 10px 24px;
+  background: $components-color;
+  border-radius: 12px;
+}
+.hero__btn {
+  display: block;
+  margin-top: 16px;
+  padding: 10px 24px;
+  width: 126px;
+  height: 40;
+  background: $prameriy-color;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 12px;
+}
+@include mobile-large {
+    .btn {
+        display: flex;
+        
+      }
+}
+

@@ -1,0 +1,60 @@
+.journey {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-top: 47px;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    &--date {
+      color: $prameriy-color;
+      font-size: 13px;
+      line-height: 24px;
+    }
+    &--info {
+      color: $global-colors;
+      text-transform: uppercase;
+      margin-top: 12px;
+    }
+    &--title {
+      font-size: 32px;
+      font-weight: 600;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      color: $global-colors;
+    }
+    &--text {
+      padding-top: 12px;
+      margin-bottom: 15px;
+    }
+    &--img {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+
+    &--underline {
+      height: 2px;
+      background-color: $prameriy-color;
+      margin-top: 24px;
+      padding-top: 2px;
+      width: 100%;
+      border: 1px solid;
+      margin-bottom: 60px;
+      &:hover {
+        background-color: blue;
+        padding-top: 3px;
+      }
+    }
+    &:nth-child(3) {
+      background: #888c94;
+      color: #ffffff;
+    }
+  }
+}

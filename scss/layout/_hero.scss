@@ -1,0 +1,73 @@
+.hero {
+  &__wrapper {
+    height: 494px;
+    background-image: url(/assets/images/hero-bg-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  &__card {
+    padding: 190px 32px 44px 16px;
+    width: 290px;
+    height: 232px;
+  }
+  &__title {
+    padding: 16px 0;
+  }
+  &__position__img {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -7%;
+    margin: 0 48%;
+    gap: 13px;
+  }
+  &__darck__img {
+    position: absolute;
+    z-index: auto;
+  }
+}
+@include mobile-large {
+  .hero {
+    &__wrapper {
+      background-image: url(/assets/images/mobile-large-hero-img.png);
+    }
+    &__position__img {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 150px;
+      position: absolute;
+      top: 92%;
+      left: -45.5%;
+    }
+  }
+}
+
+@include tablet {
+  .hero {
+    &__wrapper {
+      background-image: url(/assets/images/tablet-hero-img.png);
+      height: 560px;
+    }
+    &__position__img {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: absolute;
+      top: -7%;
+      left: -3%;
+      justify-content: center;
+      align-items: end;
+      margin: auto;
+    }
+  }
+}
+@include desktop {
+  .hero {
+    &__wrapper {
+    background-image: url(/assets/images/hero-desktop-img.png);
+    }
+  }
+}
