@@ -6,55 +6,142 @@
     justify-content: center;
     margin-top: 47px;
   }
-  &__card {
+
+  &__cards {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    &--date {
-      color: $prameriy-color;
-      font-size: 13px;
-      line-height: 24px;
+  }
+
+  &__initiative {
+    &__infobar {
+      display: flex;
+      flex-direction: row;
+
+      &--btn {
+        display: none;
+      }
     }
-    &--info {
-      color: $global-colors;
-      text-transform: uppercase;
-      margin-top: 12px;
+  }
+
+  &__trip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+
+    &--cart {
+      background: #888c94;
+      color: #ffffff;
+      padding: 32px;
+      position: relative;
     }
-    &--title {
-      font-size: 32px;
-      font-weight: 600;
-      margin-top: 12px;
-      margin-bottom: 12px;
-      color: $global-colors;
+
+    &--foto {
+      display: none;
     }
-    &--text {
-      padding-top: 12px;
-      margin-bottom: 15px;
-    }
+  }
+
+  &__card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
     &--img {
       width: 100%;
+
       img {
         width: 100%;
       }
     }
 
+    &--date {
+      color: #333;
+      font-size: 13px;
+      line-height: 24px;
+    }
+
+    &--info {
+      text-transform: uppercase;
+      margin-top: 12px;
+    }
+
+    &--title {
+      font-size: 32px;
+      font-weight: 600;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+
+    &--text {
+      padding-top: 12px;
+      margin-bottom: 15px;
+    }
+
     &--underline {
       height: 2px;
-      background-color: $prameriy-color;
+      background-color: #333;
       margin-top: 24px;
       padding-top: 2px;
       width: 100%;
       border: 1px solid;
       margin-bottom: 60px;
+
       &:hover {
         background-color: blue;
         padding-top: 3px;
       }
     }
-    &:nth-child(3) {
-      background: #888c94;
-      color: #ffffff;
+  }
+}
+
+@include tablet {
+  .journey {
+    &__cards {
+      display: flex;
+      flex-direction: row;
+      gap: 120px;
+      width: 100%;
+    }
+
+    &__card {
+      width: 100%;
+      margin-left: auto;
+
+      &--img img {
+        width: 100%;
+      }
+    }
+
+    .initiative__infobar--btn {
+      display: flex;
+    }
+  }
+
+  .journey__trip {
+    overflow: hidden;
+    height: 680px;
+
+    &--cart {
+      width: 35%;
+      position: absolute;
+      top: 60.5%;
+      z-index: 1;
+      height: 40%;
+    }
+
+    &--foto {
+      display: flex;
+      width: 100%;
+      margin: auto;
+
+      img {
+        object-fit: cover;
+      }
     }
   }
 }

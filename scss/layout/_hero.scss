@@ -6,6 +6,7 @@
     background-position: center;
     background-size: cover;
     position: relative;
+    margin-bottom: 90px;
   }
   &__card {
     padding: 190px 32px 44px 16px;
@@ -34,13 +35,12 @@
       background-image: url(/assets/images/mobile-large-hero-img.png);
     }
     &__position__img {
-      display: grid;
       width: 100%;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 150px;
+      margin: 0;
+      gap: 11%;
       position: absolute;
       top: 92%;
-      left: -45.5%;
+      left: -2%;
     }
   }
 }
@@ -67,7 +67,7 @@
 @include desktop {
   .hero {
     &__wrapper {
-    background-image: url(/assets/images/hero-desktop-img.png);
+      background-image: url(/assets/images/hero-desktop-img.png);
     }
   }
 }
