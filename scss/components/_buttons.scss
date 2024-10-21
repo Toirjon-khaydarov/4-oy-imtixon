@@ -3,22 +3,64 @@
   padding: 10px 24px;
   background: $components-color;
   border-radius: 12px;
+  backdrop-filter: blur(48px);
+  &:hover {
+    box-shadow: 0 12px 70px #bb8c4780;
+  }
 }
+
+.last__btn {
+  display: block;
+  margin: auto;
+  margin-top: 47px;
+  margin-bottom: 47px;
+  padding: 10px 24px;
+  background: #d3a562;
+  border-radius: 12px;
+  color: #ffffff;
+  height: 40px;
+  backdrop-filter: blur(48px);
+
+  &:hover {
+    box-shadow: 0 12px 70px #bb8c4780;
+  }
+}
+
 .hero__btn {
   display: block;
   margin-top: 16px;
   padding: 10px 24px;
-  width: 126px;
-  height: 40;
-  background: $prameriy-color;
-  color: #ffffff;
-  font-size: 14px;
+  background: #d3a562;
   border-radius: 12px;
+  color: #ffffff;
+  height: 40px;
+  backdrop-filter: blur(48px);
+  &:hover {
+    box-shadow: 0 12px 70px #bb8c4780;
+  }
+}
+.journey__btn {
+  display: none;
+  padding: 10px 24px;
+  background: #d3a562;
+  border-radius: 12px;
+  color: #ffffff;
+  height: 40px;
+  backdrop-filter: blur(48px);
+  &:hover {
+    box-shadow: 0 12px 70px #bb8c4780;
+  }
 }
 @include mobile-large {
-    .btn {
-        display: flex;
-        
-      }
+  .btn {
+    display: flex;
+    display: none;
+  }
 }
-
+@include tablet {
+  .journey__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

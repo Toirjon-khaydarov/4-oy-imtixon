@@ -7,4 +7,57 @@
     display: flex;
     justify-content: space-between;
   }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 56px;
+    &--item {
+      margin-top: 20px;
+      padding-top: 32px;
+    }
+    &--text {
+      margin-top: 16px;
+    }
+  }
+  .foot__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+&--cards {
+  display: flex;
+  flex-direction: row;
+}
+    &--card {
+      width: 40px;
+      height: 40px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &--cart {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding-left: 16px;
+    }
+
+    &--span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }

@@ -13,18 +13,44 @@
     justify-content: center;
     align-items: start;
   }
+  &__hidden {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    display: none;
+    
+    &--underline {
+      display: none;
+      height: 1px;
+      background-color: $prameriy-color;
+      margin-top: 24px;
+      width: 100%;
+      border: 1px solid;
+      margin-bottom: 60px;
 
-  &__initiative {
-    &__infobar {
-      display: flex;
-      flex-direction: row;
-
-      &--btn {
-        display: none;
+      &:hover {
+        background-color: blue;
+        padding-top: 1px;
       }
     }
   }
-
+  &__initiative {
+    display: flex;
+    &--infobar {
+      display: flex;
+      flex-direction: row;
+      gap: 48px;
+    }
+    &--foto {
+      display: none;
+      margin: auto;
+    }
+    img {
+      width: 100%;
+    }
+  }
   &__trip {
     display: flex;
     flex-direction: column;
@@ -83,17 +109,17 @@
     }
 
     &--underline {
-      height: 2px;
-      background-color: #333;
+      height: 1px;
+      background-color: $prameriy-color;
       margin-top: 24px;
-      padding-top: 2px;
       width: 100%;
       border: 1px solid;
       margin-bottom: 60px;
+      
 
       &:hover {
         background-color: blue;
-        padding-top: 3px;
+        padding-top: 1px;
       }
     }
   }
@@ -107,7 +133,12 @@
       gap: 120px;
       width: 100%;
     }
-
+    &__hidden {
+      display: flex;
+      &--underline {
+        display: flex;
+      }
+    }
     &__card {
       width: 100%;
       margin-left: auto;
@@ -117,31 +148,35 @@
       }
     }
 
-    .initiative__infobar--btn {
-      display: flex;
-    }
-  }
+    &__trip {
+      overflow: hidden;
+      height: 680px;
 
-  .journey__trip {
-    overflow: hidden;
-    height: 680px;
-
-    &--cart {
-      width: 35%;
-      position: absolute;
-      top: 60.5%;
-      z-index: 1;
-      height: 40%;
-    }
-
-    &--foto {
-      display: flex;
-      width: 100%;
-      margin: auto;
-
-      img {
-        object-fit: cover;
+      &--cart {
+        width: 35%;
+        position: absolute;
+        top: 60.5%;
+        z-index: 1;
+        height: 40%;
       }
+
+      &--foto {
+        display: flex;
+        width: 100%;
+        margin: auto;
+
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+    &__initiative {
+      flex-direction: row-reverse;
+      gap: 16px;
+      &--foto {
+        display: flex;
+      }
+      
     }
   }
 }
